@@ -2,7 +2,22 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-alter PROCEDURE usp_Account_Ins 
+
+CREATE TABLE [dbo].[Account](
+	[Guid] [uniqueidentifier] NOT NULL,
+	[HolderAccountName] [varchar](40) NOT NULL,
+	[AccountNumber] [varchar](10) NOT NULL,
+	[ValueBalance] [decimal](18, 2) NOT NULL,
+	[ValueLimit] [decimal](18, 2) NOT NULL,
+	[Blocked] [bit] NOT NULL,
+ CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED 
+(
+	[Guid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+create PROCEDURE usp_Account_Ins 
 (
 	@holderAccountName varchar(40),
 	@accountNumber varchar(10),
@@ -32,7 +47,7 @@ BEGIN
 END
 GO
 
-alter PROCEDURE usp_Account_Upd
+create PROCEDURE usp_Account_Upd
 (
 	@guid UNIQUEIDENTIFIER,
 	@holderAccountName varchar(40) = null,
@@ -55,7 +70,7 @@ BEGIN
 END
 GO
 
-alter PROCEDURE usp_Account_Del
+create PROCEDURE usp_Account_Del
 (
 	@guid UNIQUEIDENTIFIER
 )
@@ -65,7 +80,7 @@ BEGIN
 END
 GO
 
-alter PROCEDURE usp_Account_Sel
+create PROCEDURE usp_Account_Sel
 (
 	@guid UNIQUEIDENTIFIER = null
 )

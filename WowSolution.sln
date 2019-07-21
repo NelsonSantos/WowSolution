@@ -13,11 +13,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Repository", "03 - Rep
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Entity", "04 - Entity", "{CC192343-959E-46C9-960F-25E9556F18DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C1E5A2F4-7B42-42DE-AABC-45975AFF90B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{C1E5A2F4-7B42-42DE-AABC-45975AFF90B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{4B9A386B-A142-4A5E-BA0E-2ADD11AF8A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{4B9A386B-A142-4A5E-BA0E-2ADD11AF8A32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{D5804A17-F27C-4EC0-BC02-46129E4FB451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{D5804A17-F27C-4EC0-BC02-46129E4FB451}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - SQL Scripts", "00 - SQL Scripts", "{C7180676-F983-4AAF-BB80-87F38F25BF52}"
+	ProjectSection(SolutionItems) = preProject
+		SQLScripts\WowTesteScript.sql = SQLScripts\WowTesteScript.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
