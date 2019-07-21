@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WowWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WowWebApi.BaseController`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="TApp"></typeparam>
+            <typeparam name="TRep"></typeparam>
+        </member>
+        <member name="M:WowWebApi.BaseController`2.GetViewData">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WowWebApi.BaseController`2.Application">
+            <summary>
+            Retorna a Aplicação definida para a controler
+            </summary>
+        </member>
+        <member name="P:WowWebApi.BaseController`2.Configuration">
+            <summary>
+            Retorna o objecto com as configurações da Web API
+            </summary>
+        </member>
+        <member name="M:WowWebApi.BaseController`2.#ctor(Microsoft.Extensions.Configuration.IConfiguration,`0)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="application"></param>
+        </member>
+        <member name="M:WowWebApi.BaseController`2.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Valida a model
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WowWebApi.Controllers.AccountsController">
+            <summary>
+            API responsável pelo controle de Account's
+            </summary>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Application.AccountApplication)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="application"></param>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.GetAllAsync">
+            <summary>
+            Retorna uma lista de Account's cadastrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.GetAsync(System.Guid)">
+            <summary>
+            Retorna uma Account pelo seu Guid
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.PostAsync(Entity.Account)">
+            <summary>
+            Insere uma nova Account
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.PutAsync(System.Guid,Entity.Account)">
+            <summary>
+            Atualiza os dados de uma Account de acordo com Guid fornecido
+            </summary>
+            <param name="guid"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:WowWebApi.Controllers.AccountsController.DeleteAsync(System.Guid)">
+            <summary>
+            Exclui uma Account de acordo com Guid fornecido
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="T:WowWebApi.Filters.ErrorFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WowWebApi.Filters.ErrorFilter.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:WowWebApi.Filters.ErrorFilter.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WowWebApi.Filters.ErrorFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="exceptionContext"></param>
+        </member>
+        <member name="T:WowWebApi.IBaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WowWebApi.IBaseController.GetViewData">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WowWebApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WowWebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:WowWebApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WowWebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:WowWebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
